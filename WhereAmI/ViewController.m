@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BIDPlace.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *altitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *verticalAccuracyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceTraveledLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -32,6 +34,8 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
+    self.mapView.showsUserLocation = YES;
+    self.mapView.showsTraffic = YES;
 }
 
 #pragma mark CLLocationManagerDelegate Methods
@@ -67,7 +71,19 @@
     }
     
     if (self.previousPoint == nil)
+    {
         self.totalMovementDistance = 0;
+        
+        BIDPlace *start = [[BIDPlace alloc] init];
+        start.coordinate = newLocation.coordinate;
+        start.title = @"Start Point";
+        start.subtitle = @"This is where we started!";
+        
+        [self.mapView addAnnotation:start];
+        MKCoordinateRegion region;
+        region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 100, 100);
+        [self.mapView setRegion:region animated:YES];
+    }
     else
         self.totalMovementDistance += [newLocation distanceFromLocation:self.previousPoint];
     

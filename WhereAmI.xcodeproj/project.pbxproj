@@ -15,6 +15,7 @@
 		85F528AA214534EC0045262B /* WhereAmITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F528A9214534EC0045262B /* WhereAmITests.m */; };
 		85F528B5214534EC0045262B /* WhereAmIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F528B4214534EC0045262B /* WhereAmIUITests.m */; };
 		85F528C4214542E80045262B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F528C3214542E80045262B /* CoreLocation.framework */; };
+		85F528C721454A840045262B /* BIDPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F528C621454A840045262B /* BIDPlace.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		85F528B4214534EC0045262B /* WhereAmIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereAmIUITests.m; sourceTree = "<group>"; };
 		85F528B6214534EC0045262B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85F528C3214542E80045262B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		85F528C521454A840045262B /* BIDPlace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDPlace.h; sourceTree = "<group>"; };
+		85F528C621454A840045262B /* BIDPlace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDPlace.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				85F52893214534D50045262B /* ViewController.h */,
 				85F52894214534D50045262B /* ViewController.m */,
 				85F52896214534D50045262B /* Main.storyboard */,
+				85F528C521454A840045262B /* BIDPlace.h */,
+				85F528C621454A840045262B /* BIDPlace.m */,
 				85F52899214534EC0045262B /* Assets.xcassets */,
 				85F5289E214534EC0045262B /* Info.plist */,
 				85F5289F214534EC0045262B /* main.m */,
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F52895214534D50045262B /* ViewController.m in Sources */,
+				85F528C721454A840045262B /* BIDPlace.m in Sources */,
 				85F528A0214534EC0045262B /* main.m in Sources */,
 				85F52892214534D50045262B /* AppDelegate.m in Sources */,
 			);
